@@ -7,4 +7,16 @@ class Enigma
       date: date
     }
   end
+
+  def message
+
+  end
+
+  def key
+
+  end
+
+  def date
+
+  end
 end
