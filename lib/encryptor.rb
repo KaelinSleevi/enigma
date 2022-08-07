@@ -1,10 +1,11 @@
 class Encryptor
+  include Calculables
   attr_reader :message,
-              :keys,
-              :dates,
+              :key,
+              :date,
               :alphabet
 
-  def initialize(message, keys = key, date = dates)
+  def initialize(message, key = key_generator, date = date_generator)
     @message = message.downcase
     @key = key
     @date = date
@@ -12,10 +13,10 @@ class Encryptor
   end
 
   def encrypt
-    encrypt = Hash.new(0)
+
   end
 
   def decrypt
-    decrypt = Hash.new(0)
+    
   end
 end
