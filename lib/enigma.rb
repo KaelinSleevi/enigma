@@ -1,22 +1,13 @@
-class Enigma
+require './lib/calculables'
 
+class Enigma
+  include Calculables
+  
   def encrypt(message, key, date)
-    hash_output = {
-      message: message,
+    output_hash = {
+      encryption: message,
       key: key,
       date: date
     }
-  end
-
-  def message
-
-  end
-
-  def key
-
-  end
-
-  def date
-
   end
 end
