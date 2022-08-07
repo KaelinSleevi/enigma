@@ -21,3 +21,17 @@ RSpec.describe Encryptor do
    it "has a date" do
      expect(@encryptor.date).to eq("040895")
    end
+
+   it "has an array of characters to shift to" do
+     expect(@encryptor.alphabet).to be_an(Array)
+     expect(@encryptor.alphabet.size).to eq(27)
+   end
+
+   it "can encrypt" do
+     expect(@encryptor.encrypt).to eq(:encryption => "keder ohulw", :key => "02715", :date => "040895"})
+   end
+
+   it "can decrypt" do
+     expect(@decryptor.decrypt).to eq({:decryption => "hello world", :key => "02715", :date => "040895"})
+   end
+ end
