@@ -1,4 +1,5 @@
 require './lib/encryptor'
+require 'rspec'
 
 RSpec.describe Encryptor do
   before :each do
@@ -28,10 +29,18 @@ RSpec.describe Encryptor do
    end
 
    it "can encrypt" do
-     expect(@encryptor.encrypt).to eq(:encryption => "keder ohulw", :key => "02715", :date => "040895"})
+     expect(@encryptor.encrypt).to eq({
+       :encryption => "keder ohulw",
+       :key => "02715",
+       :date => "040895"
+       })
    end
 
    it "can decrypt" do
-     expect(@decryptor.decrypt).to eq({:decryption => "hello world", :key => "02715", :date => "040895"})
+     expect(@decryptor.decrypt).to eq({
+       :decryption => "hello world",
+       :key => "02715",
+       :date => "040895"
+       })
    end
  end
