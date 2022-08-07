@@ -2,7 +2,7 @@ require_relative './enigma'
 
 message, encrypted_file = ARGV
 enigma = Enigma.new
-decrypted_text = open(message, "r") { |file| file.read }
+message_text = open(message, "r") { |file| file.read }
 result = enigma.encrypt(message_text)
 encrypter = open(encrypted_file, "w")
 encrypter.write(result[:encryption])
