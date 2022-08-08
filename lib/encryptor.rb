@@ -7,7 +7,7 @@ class Encryptor
               :date,
               :alphabet
 
-  def initialize(message, key = key_generator, date = date_setup)
+  def initialize(message, key = generate_keys, date = generate_date)
     @message = message.downcase
     @key = key
     @date = date
@@ -15,6 +15,6 @@ class Encryptor
   end
 
   def encrypt
-
+    
   end
 end
