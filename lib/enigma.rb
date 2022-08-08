@@ -20,9 +20,14 @@ class Enigma
     @date = generate_date
 
     message_array = @message.downcase.chars
-    encrpyted = message_array.each do |character|
-
-
+    encrypted_message = message_array.each_with_index.map do |character, index|
+      if (index) % 4 == 0 then character = a_rotation[character]
+      elsif (index) % 4 == 1 then character = b_rotation[character]
+      elsif (index) % 4 == 2 then character = c_rotation[character]
+      elsif (index) % 4 == 3 then character = d_rotation[character]
+      end
+    end
+    encrypted_hash = {:encryption => encrypted_message.join, :key => @key, :date => @date}
   end
 end
 
