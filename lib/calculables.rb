@@ -1,7 +1,11 @@
 module Calculables
 
-  def alphabet
-    ("a".."z").to_a << " "
+  def generate_keys
+    Random.rand(10000).to_s.rjust(5, '0')
+  end
+
+  def generate_date
+    @date = (Time.now).strftime("%d%m%y")
   end
 
   def key_calculator
@@ -13,16 +17,11 @@ module Calculables
 
   def offset_calculator
     last_four = (@date.to_i**2).to_s[-4..-1]
-    @a_offset = last_four[0].to_i,
-    @b_offset = last_four[1].to_i,
-    @c_offset = last_four[2].to_i,
-    @d_offset = last_four[3].to_i
-  end
-
-  def shift_calculator
-    @a_shift = @a + @a_offset
-    @b_shift = @b + @b_offset
-    @c_shift = @c + @c_offset
-    @d_shift = @d + @d_offset
+    offsets = {
+    a_offset: (last_four[0].to_i + @a),
+    b_offset: (last_four[1].to_i + @b),
+    c_offset: (last_four[2].to_i + @c),
+    d_offset: (last_four[3].to_i + @d)
+  }
   end
 end
