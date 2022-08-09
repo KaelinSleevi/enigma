@@ -39,8 +39,6 @@ class Enigma
   end
   decrypted = {decryption: decrypted_message.join, key: @key, date: @date}
  end
-    # message_index_arr = message_array.each_with_index.to_a
-    # alphabet_set_index_arr = alphabet_set.each_with_index.to_a
 
   def alphabet_set
     ("a".."z").to_a << " "
@@ -57,11 +55,6 @@ class Enigma
 
   def key_shifts
     keys.merge!(offsets) { |key, key_value, offset_value| key_value + offset_value }
-  end
-  #the hash key_shifts holds the key shift amounts now
-
-  def key_generator
-    rand(10 ** 4).to_s.rjust(5,'0')
   end
 
   def a_key_rotation
@@ -80,4 +73,11 @@ class Enigma
     Hash[alphabet_set.zip(alphabet_set.rotate(key_shifts[:D]))]
   end
 
+  def key_generator
+    rand(10 ** 4).to_s.rjust(5,'0')
+  end
+
+  def date_generator
+    Time.now.strftime("%d%m%y")
+  end
 end
