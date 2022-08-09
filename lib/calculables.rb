@@ -28,20 +28,4 @@ module Calculables
   def d_key_rotation
     Hash[alphabet_set.zip(alphabet_set.rotate(key_shifts[:D]))]
   end
-
-  def reverse_a_rotation
-    a_key_rotation.invert
-  end
-
-  def reverse_b_rotation
-    b_key_rotation.invert
-  end
-
-  def reverse_c_rotation
-    c_key_rotation.invert
-  end
-
-  def reverse_d_rotation
-    d_key_rotation.invert
-  end
 end

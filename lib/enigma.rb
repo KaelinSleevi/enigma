@@ -31,13 +31,13 @@ class Enigma
    message_array = @message.chars
    decrypted_message = message_array.each_with_index.map do |char, index|
      if index % 4 == 0
-       char = reverse_a_rotation[char]
+       char = a_key_rotation.invert[char]
      elsif index % 4 == 1
-       char = reverse_b_rotation[char]
+       char = b_key_rotation.invert[char]
      elsif index % 4 == 2
-       char = reverse_c_rotation[char]
+       char = c_key_rotation.invert[char]
      elsif index % 4 == 3
-       char = reverse_d_rotation[char]
+       char = d_key_rotation.invert[char]
      end
   end
   decrypted = {decryption: decrypted_message.join, key: @key, date: @date}

@@ -1,3 +1,4 @@
+require './spec/spec_helper'
 require './lib/enigma'
 require 'rspec'
 
@@ -8,6 +9,19 @@ RSpec.describe Enigma do
 
   it 'exists' do
     expect(@enigma).to be_an(Enigma)
+  end
+
+  it 'can have an alphabet set' do
+    expect(@enigma.alphabet_set.length).to eq(27)
+    expect(@enigma.alphabet_set).to eq(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "])
+  end
+
+  it 'can generate a random key' do
+    expect(@enigma.key_generator).to be_a(String)
+  end
+
+  it 'can generate a random date' do
+    expect(@enigma.date_generator).to be_a(String)
   end
 
   it 'can encrypt messages' do
@@ -21,11 +35,26 @@ RSpec.describe Enigma do
   end
 
   it 'can encrypt when no date is given' do
-    expect(@enigma.encrypt("hello world", "02715")).to be_a(Hash)
+    expected = {
+          encryption: "keder ohulw",
+          key: "02715",
+          date: "040895"
+        }
+
+    allow_any_instance_of(Enigma).to receive(:date_generator).and_return("040895")
+    expect(@enigma.encrypt("hello world", "02715")).to eq(expected)
   end
 
   it 'can encrypt without a key or date' do
-    expect(@enigma.encrypt("hello world")).to be_a(Hash)
+    expected = {
+          encryption: "keder ohulw",
+          key: "02715",
+          date: "040895"
+        }
+
+    allow_any_instance_of(Enigma).to receive(:date_generator).and_return("040895")
+    allow_any_instance_of(Enigma).to receive(:key_generator).and_return("02715")
+    expect(@enigma.encrypt("hello world")).to eq(expected)
   end
 
   it 'can decrypt messages' do
@@ -39,6 +68,14 @@ RSpec.describe Enigma do
   end
 
   xit 'can decrypt based on encryption key' do
-    expect(@enigma.decrypt(decrypt(encrypted[:encryption], "02715"))).to be_a(Hash)
+      expected = {
+          decryption: "hello world",
+          key: "02715",
+          date: "040895"
+        }
+
+
+    allow_any_instance_of(Enigma).to receive(:date_generator).and_return("040895")
+    expect(@enigma.decrypt(encrypted[:encryption], "02715")).to eq(expected)
   end
 end
