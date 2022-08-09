@@ -5,7 +5,7 @@
   - In this project I have been able to ceate encrypt and decrypt methods that have been successfully implemented.
   
 - [x] Encrypt/decrypt command line interfaces successfully implemented.
-  - For the command line interfaces, they have been successfully implemeted so that I get a specific output message when running: `ruby ./lib/encrypt.rb message.txt encrypted.txt` and `ruby ./lib/decrypt.rb encrypted.txt decrypted.txt 82648 240818`.
+  TBD
 
 ## Object Oriented Programming
 - [x] Project is broken into logical components that are appropriately encapsulated. 
