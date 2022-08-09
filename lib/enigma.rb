@@ -1,6 +1,6 @@
 class Enigma
 
-  def encrypt(message, key, date)
+  def encrypt(message, key = key_generator, date = date_generator)
     @message = message.downcase
     @key = key
     @date = date
@@ -20,7 +20,7 @@ class Enigma
    encrypted = {encryption: encrypted_message.join, key: @key, date: @date}
  end
 
- def decrypt(message, key, date)
+ def decrypt(message, key = key_generator, date = date_generator)
    @message = message.downcase
    @key = key
    @date = date
@@ -28,13 +28,13 @@ class Enigma
    message_array = @message.chars
    decrypted_message = message_array.each_with_index.map do |char, index|
      if index % 4 == 0
-       char = a_key_rotation[char].reverse
+       char = reverse_a_rotation[char]
      elsif index % 4 == 1
-       char = b_key_rotation[char].reverse
+       char = reverse_b_rotation[char]
      elsif index % 4 == 2
-       char = c_key_rotation[char].reverse
+       char = reverse_c_rotation[char]
      elsif index % 4 == 3
-       char = d_key_rotation[char].reverse
+       char = reverse_d_rotation[char]
      end
   end
   decrypted = {decryption: decrypted_message.join, key: @key, date: @date}
@@ -71,6 +71,22 @@ class Enigma
 
   def d_key_rotation
     Hash[alphabet_set.zip(alphabet_set.rotate(key_shifts[:D]))]
+  end
+
+  def reverse_a_rotation
+    a_key_rotation.invert
+  end
+
+  def reverse_b_rotation
+    b_key_rotation.invert
+  end
+
+  def reverse_c_rotation
+    c_key_rotation.invert
+  end
+
+  def reverse_d_rotation
+    d_key_rotation.invert
   end
 
   def key_generator
