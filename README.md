@@ -10,8 +10,6 @@
           date: "040895"
         }
 
-
-    allow_any_instance_of(Enigma).to receive(:date_generator).and_return("040895")
     expect(@enigma.decrypt(encrypted[:encryption], "02715")).to eq(expected)
   end```
 
