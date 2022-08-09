@@ -1,3 +1,3 @@
 # Enigma
 --------------
-##Functionality
+## Functionality
