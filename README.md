@@ -31,7 +31,7 @@
 
 ## Ruby Conventions and Mechanics
 - [x] Code is mostly properly indented, spaced, and lines are not excessively long. 
- - All code is properly indented, spaced, and no lines are excessively lone. My `encrypt` and `decrypt` methods are about 20 lines long including the `end`.
+  - All code is properly indented, spaced, and no lines are excessively lone. My `encrypt` and `decrypt` methods are about 20 lines long including the `end`.
  
 - [x] Class, method, variable, and file names follow convention. 
   - All the class, method, and variable names in this project follow convention.
