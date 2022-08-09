@@ -50,3 +50,10 @@
 
 - [x] At least one hash is implemented in a way that makes logical sense.
   - I have implemented three hashes in their own methods `keys`, `offset`, `key_shifts`. Each are their own individual methods and a hash that has the exact defined result that I desired.
+
+
+## Test Driven Development
+
+- [x] Every method is tested at both the unit and integration level, and completely verify expected behavior (i.e., if a single method does 3 things, all 3 things are explicitly tested). 
+
+- [x] Obvious edge cases are addressed. git history demonstrates students are writing tests before implementation code. Test coverage metrics show coverage at 99% or greater.
