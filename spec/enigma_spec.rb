@@ -67,7 +67,7 @@ RSpec.describe Enigma do
     expect(@enigma.decrypt("keder ohulw", "02715", "040895")).to eq(expected)
   end
 
-  xit 'can decrypt based on encryption key' do
+  it 'can decrypt based on encryption key' do
       expected = {
           decryption: "hello world",
           key: "02715",
@@ -76,6 +76,6 @@ RSpec.describe Enigma do
 
 
     allow_any_instance_of(Enigma).to receive(:date_generator).and_return("040895")
-    expect(@enigma.decrypt(encrypted[:encryption], "02715")).to eq(expected)
+    expect(@enigma.decrypt("keder ohulw", "02715")).to eq(expected)
   end
 end
