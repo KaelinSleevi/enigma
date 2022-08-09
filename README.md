@@ -16,3 +16,4 @@
   ```
 
 - [x] Encrypt/decrypt command line interfaces successfully implemented
+  - For the command line interfaces, they have been successfully implemeted so that I get a specific output message when running: `ruby ./lib/encrypt.rb message.txt encrypted.txt`.
