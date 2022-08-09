@@ -20,8 +20,11 @@
 
 ## Object Oriented Programming
 - [x] Project is broken into logical components that are appropriately encapsulated. 
+  - My project has been split into a few components. I have one `spec` file for testing. There is an `enigma class` file containing all the methods necessary for the tests to pass. Also, there is a `calculable` module for all the calculations to execute the correct returns on the `encrypt` and `decrypt` methods. 
 
 - [x] No classes are unreasonably small or large, or contain knowledge/information/behavior that they shouldn’t know about. 
+  - Both the class and module are no longer than 60 lines. I compacted them by removing certain methods and tacking on different researched enumerables in order to clean up the `module`.
 
 - [x] Student can articulate the single responsibilities of the various components.
+  - Each and every single one of my methods in the `class` and `module` has a written explanation for its purpose(why it is there, what it is doing, and why it was implemented to reach a certain return value).
 
