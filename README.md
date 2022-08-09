@@ -31,9 +31,22 @@
 
 ## Ruby Conventions and Mechanics
 - [x] Code is mostly properly indented, spaced, and lines are not excessively long. 
+ - All code is properly indented, spaced, and no lines are excessively lone. My `encrypt` and `decrypt` methods are about 20 lines long including the `end`.
  
 - [x] Class, method, variable, and file names follow convention. 
-
+  - All the class, method, and variable names in this project follow convention.
+    
+  
 - [x] Some enumerables/data structures chosen are the most efficient tool for a given job, and students can speak as to why those enumerables/data structures were chosen. 
-
+  - The enumerables/data structures were all chosen to function within the project for a specific reason. The main new enumerables I have not used in the past and had to research are as follows:
+  ```
+    .zip
+    .rotate
+    .merge!
+    .chars
+    .each_with_index
+    
+    ```
+  
 - [x] At least one hash is implemented in a way that makes logical sense.
+  -
