@@ -55,5 +55,10 @@
 ## Test Driven Development
 
 - [x] Every method is tested at both the unit and integration level, and completely verify expected behavior (i.e., if a single method does 3 things, all 3 things are explicitly tested). 
+  - Each method is tested. I have helper methods that are being tested through the larger methods. For the individual methods such as `alphabet_set`, `date_generator`, and `key_generator`.
 
-- [x] Obvious edge cases are addressed. git history demonstrates students are writing tests before implementation code. Test coverage metrics show coverage at 99% or greater.
+- [x] Obvious edge cases are addressed. git history demonstrates students are writing tests before implementation code.
+  - Edge cases have been addressed by implementing stubs in all the necessary tests.
+
+- [x] Test coverage metrics show coverage at 99% or greater.
+  - Test coverage is at 100%
