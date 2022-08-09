@@ -17,3 +17,11 @@
 
 - [x] Encrypt/decrypt command line interfaces successfully implemented
   - For the command line interfaces, they have been successfully implemeted so that I get a specific output message when running: `ruby ./lib/encrypt.rb message.txt encrypted.txt` and `ruby ./lib/decrypt.rb encrypted.txt decrypted.txt 82648 240818`.
+
+## Object Oriented Programming
+- [x] Project is broken into logical components that are appropriately encapsulated. 
+
+- [x] No classes are unreasonably small or large, or contain knowledge/information/behavior that they shouldn’t know about. 
+
+- [x] Student can articulate the single responsibilities of the various components.
+
