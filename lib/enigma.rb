@@ -6,12 +6,22 @@ class Enigma
     @date = date
 
     message_array = @message.chars
-    # output = {
-    #   encryption: message,
-    #   key: key,
-    #   date: date
-    # }
-  end
+    encrypted_message = message_array.each_with_index.map do |char, index|
+      if index % 4 == 0
+        char = a_key_rotation[char]
+      elsif index % 4 == 1
+        char = b_key_rotation[char]
+      elsif index % 4 == 2
+        char = c_key_rotation[char]
+      elsif index % 4 == 3
+        char = d_key_rotation[char]
+      end
+   end
+   encrypted = {encryption: encrypted_message.join, key: @key, date: @date}
+ end
+
+    # message_index_arr = message_array.each_with_index.to_a
+    # alphabet_set_index_arr = alphabet_set.each_with_index.to_a
 
   def alphabet_set
     ("a".."z").to_a << " "
@@ -29,10 +39,26 @@ class Enigma
   def key_shifts
     keys.merge!(offsets) { |key, key_value, offset_value| key_value + offset_value }
   end
-  #the hash keys holds the key shifts now
+  #the hash key_shifts holds the key shift amounts now
 
   def key_generator
     rand(10 ** 4).to_s.rjust(5,'0')
+  end
+
+  def a_key_rotation
+    Hash[alphabet_set.zip(alphabet_set.rotate(key_shifts[:A]))]
+  end
+
+  def b_key_rotation
+    Hash[alphabet_set.zip(alphabet_set.rotate(key_shifts[:B]))]
+  end
+
+  def c_key_rotation
+    Hash[alphabet_set.zip(alphabet_set.rotate(key_shifts[:C]))]
+  end
+
+  def d_key_rotation
+    Hash[alphabet_set.zip(alphabet_set.rotate(key_shifts[:D]))]
   end
 
   # def decrypt(message, key, date)
@@ -43,7 +69,3 @@ class Enigma
   #   }
   # end
 end
-#
-#take the key and the date to find the offset_shift_calculator
-#iterate through the message and shift through each character
-#so it rotates through offsets
