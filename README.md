@@ -5,7 +5,7 @@
   - In this project I have been able to ceate encrypt and decrypt methods that have been successfully implemented.
   
 - [x] Encrypt/decrypt command line interfaces successfully implemented.
-  TBD
+  - TBD
 
 ## Object Oriented Programming
 - [x] Project is broken into logical components that are appropriately encapsulated. 
