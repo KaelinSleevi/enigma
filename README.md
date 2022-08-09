@@ -49,3 +49,4 @@
   - Each of the enumerables used had a reason for being used and were the most effecient possible for the result of each individual methods used. In order to get the desirable outcome in this project, using these enumerables was not crucial, but was the most effecient outcome.
 
 - [x] At least one hash is implemented in a way that makes logical sense.
+  - I have implemented three hashes in their own methods `keys`, `offset`, `key_shifts`. Each are their own individual methods and a hash that has the exact defined result that I desired.
