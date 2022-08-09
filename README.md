@@ -15,7 +15,7 @@
   end
   ```
 
-- [x] Encrypt/decrypt command line interfaces successfully implemented
+- [x] Encrypt/decrypt command line interfaces successfully implemented.
   - For the command line interfaces, they have been successfully implemeted so that I get a specific output message when running: `ruby ./lib/encrypt.rb message.txt encrypted.txt` and `ruby ./lib/decrypt.rb encrypted.txt decrypted.txt 82648 240818`.
 
 ## Object Oriented Programming
@@ -31,7 +31,7 @@
 
 ## Ruby Conventions and Mechanics
 - [x] Code is mostly properly indented, spaced, and lines are not excessively long. 
-  - All code is properly indented, spaced, and no lines are excessively lone. My `encrypt` and `decrypt` methods are about 20 lines long including the `end`.
+  - All code is properly indented, spaced, and no lines are excessively long. My `encrypt` and `decrypt` methods are about 20 lines long including the `end`.
  
 - [x] Class, method, variable, and file names follow convention. 
   - All the class, method, and variable names in this project follow convention.
