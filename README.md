@@ -28,3 +28,12 @@
 - [x] Student can articulate the single responsibilities of the various components.
   - Each and every single one of my methods in the `class` and `module` has a written explanation for its purpose(why it is there, what it is doing, and why it was implemented to reach a certain return value).
 
+
+## Ruby Conventions and Mechanics
+- [x] Code is mostly properly indented, spaced, and lines are not excessively long. 
+ 
+- [x] Class, method, variable, and file names follow convention. 
+
+- [x] Some enumerables/data structures chosen are the most efficient tool for a given job, and students can speak as to why those enumerables/data structures were chosen. 
+
+- [x] At least one hash is implemented in a way that makes logical sense.
