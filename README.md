@@ -62,3 +62,16 @@
 
 - [x] Test coverage metrics show coverage at 99% or greater.
   - Test coverage is at 100%
+
+
+
+## Version Control
+
+- [x] Minimum 30 commits and 3 pull requests. 
+  - In this project I have used 78 commits and 18 branches in total with 21 pull requests.
+ 
+- [x] More than half of your pull requests include related and logical chunks of functionality, and are named and documented to clearly communicate the purpose of the pull request. 
+  - All my pull requests included logical chunks and were named clearly. There are a few pull requests that included components that were not fully described by the branch name. I got caught up in the work I was doing and forgot to switch branches before moving on.
+
+- [] No more than 3 commits include multiple pieces of functionality.
+  - Many of my commits include multiple pieces of functionality.
