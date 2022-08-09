@@ -23,7 +23,7 @@ class Enigma
    encrypted = {encryption: encrypted_message.join, key: @key, date: @date}
  end
 
- def decrypt(message, key, date = date_generator)
+ def decrypt(message, key = key_generator, date = date_generator)
    @message = message.downcase
    @key = key
    @date = date
