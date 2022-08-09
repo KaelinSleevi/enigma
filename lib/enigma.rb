@@ -1,19 +1,11 @@
-require './lib/calculables'
-
 class Enigma
-  include Calculables
-  attr_reader :alphabet
-
-  def initialize
-    @alphabet = ('a'..'z').to_a << ' '
-  end
 
   def encrypt(message, key, date)
-    @message = message.downcase
-    @key = key
-    @date = date
-
-    message_array = @message.downcase.chars
+    output = {
+      encryption: message,
+      key: key,
+      date: date
+    }
   end
 end
 #
